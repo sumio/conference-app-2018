@@ -53,10 +53,6 @@ object Depends {
 
     val rxbroadcast = "com.cantrowitz:rxbroadcast:2.0.0"
 
-    object Binding {
-        val compiler = "com.android.databinding:compiler:3.0.1"
-    }
-
     object Dagger {
         val core = "com.google.dagger:dagger:${Versions.dagger}"
         val compiler = "com.google.dagger:dagger-compiler:${Versions.dagger}"
@@ -124,9 +120,9 @@ object Depends {
     val threetenbp = "org.threeten:threetenbp:1.3.6"
 
     object SupportTest {
-        val runner = "com.android.support.test:runner:1.0.1"
-        val espresso = "com.android.support.test.espresso:espresso-core:3.0.1"
-        val contrib = "com.android.support.test.espresso:espresso-contrib:3.0.1"
+        val runner = "com.android.support.test:runner:1.0.2"
+        val espresso = "com.android.support.test.espresso:espresso-core:3.0.2"
+        val contrib = "com.android.support.test.espresso:espresso-contrib:3.0.2"
 
     }
 

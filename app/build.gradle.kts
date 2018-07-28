@@ -30,7 +30,6 @@ val versionPatch = 0
 
 android {
     compileSdkVersion(Versions.compileSdk)
-    buildToolsVersion(Versions.buildTools)
     dataBinding.isEnabled = true
 
     defaultConfig {
@@ -52,7 +51,7 @@ android {
     }
     applicationVariants.all(object : Action<ApplicationVariant> {
         override fun execute(variant: ApplicationVariant) {
-            variant.resValue("string", "versionInfo", variant.versionName)
+            variant.resValue("string", "versionInfo", variant.versionName!!)
         }
 
     })
@@ -101,7 +100,7 @@ android {
         unitTests.isIncludeAndroidResources = true
     }
     lintOptions {
-        lintConfig = file("lint.xml")
+        setLintConfig(file("lint.xml"))
         textReport = true
         textOutput("stdout")
     }
@@ -154,8 +153,6 @@ dependencies {
     implementation(Depends.RxJava2.android)
     implementation(Depends.RxJava2.kotlin)
     implementation(Depends.rxbroadcast)
-
-    kapt(Depends.Binding.compiler)
 
     implementation(Depends.Dagger.core)
     implementation(Depends.Dagger.android)

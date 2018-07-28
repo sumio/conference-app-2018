@@ -23,7 +23,7 @@ apply {
 }
 
 dependencies {
-    compile(kotlin("stdlib-jre7", Versions.kotlin))
+    implementation(kotlin("stdlib-jdk7", Versions.kotlin))
 }
 
 java {
